@@ -173,6 +173,8 @@ public class StoryView extends RelativeLayout implements Checkable {
         mTitleTextView.setText(story.getDisplayedTitle());
         mPostedTextView.setText(story.getDisplayedTime(getContext()));
         mPostedTextView.append(story.getDisplayedAuthor(getContext(), false, 0));
+        // Disabling time and author label
+        mPostedTextView.setVisibility(GONE);
         switch (story.getType()) {
             case Item.JOB_TYPE:
                 mSourceTextView.setText(null);

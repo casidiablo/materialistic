@@ -51,7 +51,7 @@ public class Application extends android.app.Application implements Injectable {
         AppCompatDelegate.setDefaultNightMode(Preferences.Theme.getAutoDayNightMode(this));
         AlgoliaClient.sSortByTime = Preferences.isSortByRecent(this);
         mRefWatcher = LeakCanary.install(this);
-        if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG && false) { //disabling this because it's for personal use only
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
                     .detectAll()
                     .penaltyFlashScreen()
